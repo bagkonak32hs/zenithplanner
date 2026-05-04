@@ -3,91 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gizlilik Politikası | Zenith Planner</title>
-  <meta name="description" content="Zenith Planner Android uygulaması gizlilik politikası." />
+  <title>Zenith Planner | Privacy Policy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <main class="container">
-    <section class="card">
+<div class="lang-switch">
+  <select onchange="changeLang(this.value)">
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="es">🇪🇸 Español</option>
+  </select>
+</div>
 
-      <div class="logo-area">
-        <div class="logo">
-          <span>Z</span>
-        </div>
-        <h1>Zenith Planner</h1>
-        <p class="subtitle">Premium Dijital Ajanda</p>
-      </div>
+<main class="container">
+  <section class="card">
 
-      <h2>Gizlilik Politikası</h2>
-      <p class="date">Son güncelleme: 04 Mayıs 2026</p>
+    <div class="logo-area">
+      <div class="logo"><span>Z</span></div>
+      <h1>Zenith Planner</h1>
+      <p class="subtitle" data-tr="Premium Dijital Ajanda" data-en="Premium Digital Planner" data-es="Agenda Digital Premium"></p>
+    </div>
 
-      <p>
-        Bu Gizlilik Politikası, <strong>Zenith Planner</strong> mobil uygulamasının
-        kullanıcı verilerini nasıl topladığını, kullandığını ve koruduğunu açıklar.
-      </p>
+    <h2 data-tr="Gizlilik Politikası" data-en="Privacy Policy" data-es="Política de Privacidad"></h2>
+    <p class="date">04 May 2026</p>
 
-      <h2>1. Toplanan Bilgiler</h2>
-      <p>
-        Uygulama; günlük planlar, görevler, hedefler, alışkanlık takipleri, notlar ve
-        kullanıcı tarafından girilen kişisel planlama verilerini işleyebilir.
-      </p>
+    <p data-tr="Bu politika kullanıcı verilerinin nasıl işlendiğini açıklar."
+       data-en="This policy explains how user data is handled."
+       data-es="Esta política explica cómo se manejan los datos del usuario."></p>
 
-      <h2>2. Verilerin Kullanım Amacı</h2>
-      <p>
-        Toplanan veriler yalnızca uygulama özelliklerini sunmak, kullanıcı deneyimini
-        geliştirmek, planlama ve takip işlemlerini sağlamak amacıyla kullanılır.
-      </p>
+    <h2 data-tr="Toplanan Veriler" data-en="Collected Data" data-es="Datos Recopilados"></h2>
+    <p data-tr="Görevler, notlar ve planlama verileri toplanabilir."
+       data-en="Tasks, notes and planning data may be collected."
+       data-es="Se pueden recopilar tareas, notas y datos de planificación."></p>
 
-      <h2>3. Üçüncü Taraf Hizmetler</h2>
-      <p>
-        Uygulama; abonelik, analiz, hata raporlama, bildirim veya bulut senkronizasyonu
-        gibi amaçlarla Google Play Hizmetleri, Firebase veya benzeri üçüncü taraf
-        servisleri kullanabilir.
-      </p>
+    <h2 data-tr="Ödeme Sistemi" data-en="Payments" data-es="Pagos"></h2>
+    <p data-tr="Ödemeler Google Play üzerinden yapılır."
+       data-en="Payments are handled via Google Play."
+       data-es="Los pagos se gestionan a través de Google Play."></p>
 
-      <h2>4. Abonelik ve Ödemeler</h2>
-      <p>
-        Profesyonel özellikler ücretli abonelik ile sunulabilir. Google Play üzerinden
-        yapılan abonelik ve ödeme işlemleri Google Play ödeme altyapısı tarafından
-        yönetilir. Uygulama kredi kartı bilgilerinizi doğrudan toplamaz veya saklamaz.
-      </p>
+    <h2 data-tr="İletişim" data-en="Contact" data-es="Contacto"></h2>
+    <p class="contact">
+      <a href="mailto:info@greendevcode.com">info@greendevcode.com</a>
+    </p>
 
-      <h2>5. Veri Güvenliği</h2>
-      <p>
-        Kullanıcı verilerinin güvenliği için makul teknik ve idari önlemler alınır.
-      </p>
+    <footer data-tr="Tüm hakları saklıdır."
+            data-en="All rights reserved."
+            data-es="Todos los derechos reservados."></footer>
 
-      <h2>6. Veri Paylaşımı</h2>
-      <p>
-        Kullanıcı verileri, yasal zorunluluklar dışında üçüncü kişilerle satılmaz,
-        kiralanmaz veya pazarlama amacıyla paylaşılmaz.
-      </p>
+  </section>
+</main>
 
-      <h2>7. Çocukların Gizliliği</h2>
-      <p>
-        Uygulama 13 yaş altındaki çocukları hedeflemez.
-      </p>
+<script>
+function changeLang(lang) {
+  document.documentElement.lang = lang;
 
-      <h2>8. Kullanıcı Hakları</h2>
-      <p>
-        Kullanıcılar, uygulama içindeki verilerini görüntüleme, düzenleme veya silme
-        hakkına sahiptir.
-      </p>
+  document.querySelectorAll("[data-tr]").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
+}
 
-      <h2>9. İletişim</h2>
-      <p class="contact">
-        E-posta:
-        <a href="mailto:info@greendevcode.com">info@greendevcode.com</a>
-      </p>
-
-      <footer>
-        © 2026 Zenith Planner. Tüm hakları saklıdır.
-      </footer>
-
-    </section>
-  </main>
+// Default Türkçe
+changeLang("tr");
+</script>
 
 </body>
 </html>
