@@ -1,3 +1,17 @@
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.lang-switch select {
+  background: black;
+  color: gold;
+  border: 1px solid gold;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
 * {
   box-sizing: border-box;
 }
